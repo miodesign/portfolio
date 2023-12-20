@@ -1,0 +1,20 @@
+#contact-form {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 150px;
+}
+
+@media (max-width:600px) {
+    #contact-form {
+        text-align: center;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+
+    iframe {
+        width: 90%;
+        height: 1400px;
+        font-size: 15px;
+    }
+}

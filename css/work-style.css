@@ -1,0 +1,156 @@
+#wark-mainvisual {
+    height: 675px;
+    background:  url(../images/work_bg.jpg) no-repeat center / cover rgba(0,0,0,0.4);
+    background-blend-mode:darken;
+    text-align: center;
+}
+
+#wark-mainvisual .title{
+    color: #fff;
+    font-size: 150px;
+    font-family: 'Style Script', cursive;
+    padding-top: 12%;
+}
+
+#work-warrper {
+    height: auto;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+}
+
+#work-warpper .work-content {
+    display: flex;
+    width: 60%;
+    max-width: 1000px;
+    border: 1px solid rgba(0,0,0,0.1);
+    padding: 50px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    margin-left: 25%;
+}
+
+#work-warpper .explanation {
+    width: 65%;
+    padding-left: 20px;
+    padding-right: 40px;
+    width: 60%;
+}
+
+.explanation-title {
+    font-size: 20px;
+    padding-top: 50px;
+    padding-bottom: 20px;
+
+}
+
+.explanation-title a {
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: #211E55;
+}
+
+.explanation-title a::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #211E55;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+    }
+    
+.explanation-title a:hover::after {
+    transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+
+.explanation-comment {
+    font-size: 16px;
+    padding-bottom: 50px;
+}
+
+.explanation-comment a {
+    color: #FC9750;
+    font-weight: bold;
+}
+
+.work-image {
+    width: 40%;
+    text-align: center;
+    padding-top: 20px;
+    padding-right: 10px;
+}
+
+.work-image img {
+    height: 100%;
+    width: 100%;
+}
+
+.sp {
+    display: none !important;
+}
+
+@media (max-width:600px) {
+
+    #wark-mainvisual {
+        height: 500px;
+        padding-top: 150px;
+    }
+
+    #wark-mainvisual .title {
+        font-size: 60px;
+    }
+
+    #work-warpper {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    #work-warpper .work-content {
+        width: 80%;
+        flex-direction: column;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding: 0;
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+
+    #work-warpper .explanation {
+        width: 75%;
+        order: 2;
+        padding: 0px;
+        margin: 0 auto;
+    }
+
+    .explanation-title  {
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding-top: 8px;
+    }
+
+
+    .work-image {
+        order: 1;
+        width: 100%;
+        padding: 0;
+    }
+
+    .sp {
+        order: 3;
+        display: block!important;
+        text-align: center;
+        padding-bottom: 50px;
+    }
+
+    .sp a {
+        color: #211E55;
+        font-weight: bold;
+        border-bottom: #211E55 2px solid;
+    }
+}

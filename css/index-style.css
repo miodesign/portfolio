@@ -1,0 +1,429 @@
+/* 共通部分 */
+@charset "utf-8";
+
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family:'メイリオ', 'Meiryo','ＭＳ ゴシック','Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
+    line-height: 1.7;
+    color: #211E55;
+    background-color: #EDF8FF;
+}
+
+a {
+    text-decoration: none;
+}
+
+.sec-title {
+    font-size: 50px;
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 80px;
+}
+
+.btn {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+.button {
+    position: relative;
+    padding: 20px 50px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #FC9750;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.button::after {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: translate(0, -50%) rotate(45deg);
+}
+
+.button:hover {
+    color: #FC9750;
+    background-color: #FFF;
+    border: #FC9750 1px solid;
+
+}
+
+.button:hover::after {
+    border-top: 3px solid #FC9750;
+    border-right: 3px solid #FC9750;
+}
+
+/* header */
+header {
+    height: 84px;
+    background-color: #07689F;
+    margin: 0 auto;
+}
+
+#header {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 17px;
+}
+
+#header img {
+    height: 50px;
+    width: 176px;
+}
+
+#header ul {
+    display: flex;
+    justify-content: left;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+#header li {
+    list-style: none;
+    padding-left: 35px;
+}
+
+#header a {
+    color: #FFF;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#header a:hover {
+    color: #FC9750;
+}
+
+/* mein-content */
+/* mv */
+#mainvisual {
+    height: 675px;
+    padding-top: 210px;
+    text-align: center;
+    background:  url(../images/main-bg.jpg) no-repeat center / cover rgba(0,0,0,0.5);
+    background-blend-mode:darken;
+
+}
+
+.mainvisual-title h2 {
+    font-family: 'Style Script', cursive;
+    font-size: 150px;
+    line-height: 0.8;
+    color: #FFF;
+    transform: rotate(-10deg);
+}
+
+.first-title {
+    margin-right: 200px;
+}
+
+.second-title {
+    margin-left: 200px;
+}
+
+/* about */
+#about .content {
+    display: flex;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#about .photo {
+    width: 40%;
+    padding-top: 23%;
+    padding-left: 5%;
+}
+
+#about .photo img {
+    height: 295px;
+    width: 295px;
+    object-fit:cover;
+    border-radius:50%;
+}
+
+#about .about-content {
+    width: 60%;
+    padding-right: 10px;
+}
+
+#about .wrapper {
+    display: flex;
+    padding-bottom: 28px;
+    font-size: 20px;
+}
+
+#about .item {
+    width: 20%;
+}
+
+#about .text {
+    width: 80%;
+}
+
+#about .text p {
+    padding-bottom: 15px;
+    line-height: 1.5;
+}
+
+/* スライダー */
+.slider {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding-bottom: 150px;
+}
+
+.xslider_wrap {
+	display: flex;
+	overflow: hidden;
+	width: 100%;
+    height: 350px;
+}
+
+.xslider1 , .xslider2 {
+	display: inline-flex;
+	flex: none;
+	animation: xslider 80s 2s linear infinite;
+}
+
+.xslider_wrap:hover div {
+	animation-play-state: paused!important;
+}
+
+.xslider1 div , .xslider2 div {
+	flex: none;
+	padding: 15px;
+}
+
+.xslider1 div:hover , .xslider2 div:hover {
+	transform: translateY(-5px);
+}
+
+.xslider1 img, .xslider2 img {
+	height: 350px;
+}
+
+@keyframes xslider {
+	0% {
+	transform: translateX(0);
+	}
+	100% {
+	transform: translateX(-100%);
+	}
+}
+
+/* work */
+#work .content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin:  0 auto;
+    padding-bottom: 150px;
+}
+
+#work .wrapper {
+    border: black 1px solid;
+    width: 305px;
+    height: 380px;
+}
+
+#work img {
+    height: 215px;
+    width: 305;
+}
+
+#work .wrapper p {
+    text-align: center;
+    font-size: 22px;
+    padding-top: 50px;
+}
+
+/* contact */
+#contact {
+    background-color: rgba(7,104,159,0.5);
+    padding-bottom: 150px;
+}
+
+#contact h3 {
+    color: #FFF;
+}
+
+#contact .content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px
+}
+
+#contact .content p {
+    color: #FFF;
+    font-size: 20px;
+}
+
+.sma{
+    display: none;
+}
+
+/* footer  */
+footer {
+    background-color: #07689F;
+    height: 95px;
+    text-align: center;
+}
+
+footer p {
+    font-size: 20px;
+    color: #FFF;
+    padding-top: 35px;
+}
+
+@media (max-width:600px) {
+
+    /* 共通 */
+    .sec-title {
+        font-size: 30px;
+        padding-top: 80px;
+        padding-bottom: 38px;
+    }
+
+    .btn {
+        padding-right: 30px;
+    }
+
+    .button {
+        padding: 15px 35px;
+        font-size: 15px;
+    }
+    /* header  */
+    header {
+        height: 70px;
+        padding-right: 30px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    #header img {
+        height: 25px;
+        width: 90px;
+        margin-bottom: 5px;
+    }
+
+    #header li {
+        padding-bottom: 10px;
+    }
+
+    #header a {
+        color: #FFF;
+        font-size: 15px;
+    }
+
+    /* mainvisual */
+    #mainvisual {
+        height: 500px;
+        padding-top: 180px;
+    }
+
+    .mainvisual-title h2 {
+       font-size: 60px
+    }
+
+    .first-title {
+        margin-right: 110px;
+    }
+    
+    .second-title {
+        margin-left: 60px;
+    }
+
+    #about .content {
+        flex-direction:column;
+        margin: 0 auto;
+    }
+    
+    #about .photo {
+        width: 100%;
+        padding-top: 10px;
+        padding-left: 27%;
+    }
+
+    #about .photo img {
+        height: 200px;
+        width: 200px;
+    }
+
+    #about .about-content {
+        width: 100%;
+        padding-top: 50px;
+        padding-left: 11%;
+        padding-right: 40px;
+    }
+
+    #about .wrapper {
+        font-size: 15px;
+    }
+
+    #about .item {
+        width: 90px;
+    }
+
+    .slider {
+        padding-bottom: 50px;
+    }
+    /* work */
+
+    #work {
+        padding-top: 20px;
+        padding-bottom: 50px;
+    }
+
+    #work .content {
+        flex-direction: column;
+        row-gap: 48px;
+        padding-left: 15%;
+        padding-bottom: 80px;
+        width: 100%;
+    }
+
+    #work .work-btn {
+        padding-left: 8%;
+    }
+
+    /* contact */
+
+    #contact {
+        padding-bottom: 48px;
+    }
+
+    #contact .content {
+        flex-direction: column;
+        row-gap: 80px;
+    }
+
+    #contact .content p {
+        font-size: 15px;
+        text-align: center;
+        padding-right: 20px;
+    }
+
+    .sma{
+        display: block;
+
+    }
+
+    #contact .contact-btn {
+        padding-left: 7%;
+    }
+
+}
