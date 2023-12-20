@@ -223,6 +223,11 @@ header {
 }
 
 /* work */
+
+#work {
+    margin-bottom: 150px;
+}
+
 #work .content {
     display: flex;
     justify-content: space-between;
