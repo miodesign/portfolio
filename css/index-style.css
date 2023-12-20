@@ -389,8 +389,8 @@ footer p {
     /* work */
 
     #work {
-        padding-top: 20px;
-        padding-bottom: 50px;
+        margin-top: 20px;
+        margin-bottom: 50px;
     }
 
     #work .content {
