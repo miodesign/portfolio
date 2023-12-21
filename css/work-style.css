@@ -39,7 +39,7 @@
 
 .explanation-title {
     font-size: 20px;
-    padding-top: 50px;
+    /* padding-top: 50px; */
     padding-bottom: 20px;
 
 }
@@ -124,6 +124,7 @@
         order: 2;
         padding: 0px;
         margin: 0 auto;
+
     }
 
     .explanation-title  {
