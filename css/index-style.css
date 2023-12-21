@@ -30,7 +30,7 @@ a {
 
 .button {
     position: relative;
-    padding: 20px 50px;
+    padding: 20px 50px 20px 35px;
     color: #fff;
     border-radius: 15px;
     background-color: #FC9750;
@@ -244,14 +244,39 @@ header {
 
 #work img {
     height: 215px;
-    width: 305;
+    width: 305px;
+}
+
+#work .wrapper {
+    text-align: center;
 }
 
 #work .wrapper p {
-    text-align: center;
+    color: #211E55;
     font-size: 22px;
     padding-top: 50px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
 }
+
+#work .wrapper p::after {
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 1px;
+    background: #211E55;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform .3s;
+    }
+    
+    #work .wrapper p:hover::after {
+    transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+}
+
 
 /* contact */
 #contact {
@@ -396,7 +421,7 @@ footer p {
     #work .content {
         flex-direction: column;
         row-gap: 48px;
-        padding-left: 15%;
+        padding-left: 13%;
         padding-bottom: 80px;
         width: 100%;
     }
